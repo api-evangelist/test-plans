@@ -1,0 +1,14 @@
+name: Test Plans
+description: Structured documentation outlining test objectives, scope, approach,
+  resources, schedule, and deliverables for software testing activities. It supports
+  the full software development lifecycle from design through deployment and maintenance.
+url: https://en.wikipedia.org/wiki/Test_plan
+tags:
+- Testing
+- Quality Assurance
+- Documentation
+- Software Development
+created: '2025'
+modified: '2025'
+apis: []
+common: []
