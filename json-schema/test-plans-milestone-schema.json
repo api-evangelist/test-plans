@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-plans/refs/heads/main/json-schema/test-plans-milestone-schema.json",
+  "title": "TestMilestone",
+  "description": "A key checkpoint in a test plan indicating when a specific testing phase or deliverable is expected to be completed.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the milestone."
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the milestone (e.g., Test Completion, UAT Sign-off, Go/No-Go)."
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of what completing this milestone signifies."
+    },
+    "test_plan_id": {
+      "type": "string",
+      "description": "Identifier of the test plan this milestone belongs to."
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Target date for completing this milestone."
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Actual date the milestone was completed."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "in-progress", "completed", "at-risk", "missed"],
+      "description": "Current status of the milestone."
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of criteria that must be met for this milestone to be considered complete."
+    },
+    "owner": {
+      "type": "string",
+      "description": "Person responsible for this milestone."
+    }
+  },
+  "required": ["id", "name", "due_date", "status"]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "sample-id",
+  "name": "Sample Name",
+  "description": "This is a sample description.",
+  "project_id": "project-001",
+  "status": "archived",
+  "objectives": "sample-objectives",
+  "scope": {
+    "in_scope": [
+      "per-api-key",
+      "per-api-key"
+    ],
+    "out_of_scope": [
+      "per-api-key",
+      "per-api-key"
+    ]
+  },
+  "approach": "sample-approach",
+  "entry_criteria": [
+    "sample-entry-criteria-item"
+  ],
+  "exit_criteria": [
+    "sample-exit-criteria-item"
+  ],
+  "test_types": [
+    "functional",
+    "usability",
+    "security"
+  ],
+  "environments": [
+    "staging",
+    "staging"
+  ],
+  "start_date": "2025-03-15",
+  "end_date": "2025-03-15",
+  "owner": "sample-owner",
+  "created_at": "2025-03-15T14:30:00Z",
+  "updated_at": "2025-03-15T14:30:00Z",
+  "test_cycle_ids": [
+    "sample-test-cycle-ids-item",
+    "sample-test-cycle-ids-item"
+  ]
+}

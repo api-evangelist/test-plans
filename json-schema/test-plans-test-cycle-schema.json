@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-plans/refs/heads/main/json-schema/test-plans-test-cycle-schema.json",
+  "title": "TestCycle",
+  "description": "A time-boxed execution cycle within a test plan, grouping test cases for a specific release, sprint, or testing phase.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the test cycle."
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the test cycle (e.g., Sprint 12 Regression, Release 2.1 UAT)."
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the test cycle and its goals."
+    },
+    "test_plan_id": {
+      "type": "string",
+      "description": "Identifier of the parent test plan."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "in-progress", "completed", "abandoned"],
+      "description": "Current execution status of the test cycle."
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date of the test cycle."
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "End date of the test cycle."
+    },
+    "environment": {
+      "type": "string",
+      "description": "Target environment for this test cycle."
+    },
+    "build_version": {
+      "type": "string",
+      "description": "Software build version being tested in this cycle."
+    },
+    "total_tests": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total number of test cases in this cycle."
+    },
+    "passed": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of test cases that passed."
+    },
+    "failed": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of test cases that failed."
+    },
+    "blocked": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of test cases that were blocked."
+    },
+    "not_executed": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of test cases not yet executed."
+    },
+    "owner": {
+      "type": "string",
+      "description": "Person responsible for managing this test cycle."
+    }
+  },
+  "required": ["id", "name", "test_plan_id", "status"]
+}

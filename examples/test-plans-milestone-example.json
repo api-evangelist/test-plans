@@ -1,0 +1,14 @@
+{
+  "id": "sample-id",
+  "name": "Sample Name",
+  "description": "This is a sample description.",
+  "test_plan_id": "test_plan-001",
+  "due_date": "2025-03-15",
+  "completed_date": "2025-03-15",
+  "status": "pending",
+  "criteria": [
+    "sample-criteria-item",
+    "sample-criteria-item"
+  ],
+  "owner": "sample-owner"
+}

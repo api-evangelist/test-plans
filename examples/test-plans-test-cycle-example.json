@@ -1,0 +1,17 @@
+{
+  "id": "sample-id",
+  "name": "Sample Name",
+  "description": "This is a sample description.",
+  "test_plan_id": "test_plan-001",
+  "status": "abandoned",
+  "start_date": "2025-03-15",
+  "end_date": "2025-03-15",
+  "environment": "staging",
+  "build_version": "1.2.3",
+  "total_tests": 48,
+  "passed": 41,
+  "failed": 62,
+  "blocked": 33,
+  "not_executed": 56,
+  "owner": "sample-owner"
+}

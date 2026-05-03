@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-plans/refs/heads/main/json-schema/test-plans-test-plan-schema.json",
+  "title": "TestPlan",
+  "description": "A structured document defining the objectives, scope, approach, schedule, and resources for a software testing effort.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the test plan."
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the test plan."
+    },
+    "description": {
+      "type": "string",
+      "description": "High-level description of the testing effort."
+    },
+    "project_id": {
+      "type": "string",
+      "description": "Identifier of the project this test plan covers."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "completed", "archived"],
+      "description": "Current status of the test plan."
+    },
+    "objectives": {
+      "type": "string",
+      "description": "Goals and objectives of the testing effort."
+    },
+    "scope": {
+      "$ref": "#/$defs/TestScope",
+      "description": "What is in and out of scope for this test plan."
+    },
+    "approach": {
+      "type": "string",
+      "description": "The testing approach and methodology to be used."
+    },
+    "entry_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Conditions that must be met before testing can begin."
+    },
+    "exit_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Conditions that must be met before testing is considered complete."
+    },
+    "test_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["functional", "regression", "performance", "security", "usability", "integration", "acceptance", "smoke"]
+      },
+      "description": "Types of testing to be performed."
+    },
+    "environments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Environments in which testing will be performed."
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Planned start date for testing."
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Planned end date for testing."
+    },
+    "owner": {
+      "type": "string",
+      "description": "Test lead or owner responsible for this test plan."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the plan was created."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the plan was last updated."
+    },
+    "test_cycle_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "References to test cycles associated with this plan."
+    }
+  },
+  "required": ["id", "name", "status"],
+  "$defs": {
+    "TestScope": {
+      "type": "object",
+      "properties": {
+        "in_scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Features and components included in the testing scope."
+        },
+        "out_of_scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Features and components excluded from the testing scope."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-plans/refs/heads/main/json-structure/test-plans-test-cycle-structure.json",
+  "name": "TestCycle",
+  "description": "A time-boxed execution cycle within a test plan, grouping test cases for a specific release, sprint, or testing phase.",
+  "properties": {
+    "id": {
+      "description": "Unique identifier for the test cycle.",
+      "type": "string"
+    },
+    "name": {
+      "description": "Name of the test cycle (e.g., Sprint 12 Regression, Release 2.1 UAT).",
+      "type": "string"
+    },
+    "description": {
+      "description": "Description of the test cycle and its goals.",
+      "type": "string"
+    },
+    "test_plan_id": {
+      "description": "Identifier of the parent test plan.",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "planned",
+        "in-progress",
+        "completed",
+        "abandoned"
+      ],
+      "description": "Current execution status of the test cycle.",
+      "type": "string"
+    },
+    "start_date": {
+      "description": "Start date of the test cycle.",
+      "type": "date"
+    },
+    "end_date": {
+      "description": "End date of the test cycle.",
+      "type": "date"
+    },
+    "environment": {
+      "description": "Target environment for this test cycle.",
+      "type": "string"
+    },
+    "build_version": {
+      "description": "Software build version being tested in this cycle.",
+      "type": "string"
+    },
+    "total_tests": {
+      "minimum": 0,
+      "description": "Total number of test cases in this cycle.",
+      "type": "int32"
+    },
+    "passed": {
+      "minimum": 0,
+      "description": "Number of test cases that passed.",
+      "type": "int32"
+    },
+    "failed": {
+      "minimum": 0,
+      "description": "Number of test cases that failed.",
+      "type": "int32"
+    },
+    "blocked": {
+      "minimum": 0,
+      "description": "Number of test cases that were blocked.",
+      "type": "int32"
+    },
+    "not_executed": {
+      "minimum": 0,
+      "description": "Number of test cases not yet executed.",
+      "type": "int32"
+    },
+    "owner": {
+      "description": "Person responsible for managing this test cycle.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "test_plan_id",
+    "status"
+  ],
+  "type": "object"
+}

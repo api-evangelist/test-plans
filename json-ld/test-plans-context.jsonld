@@ -1,0 +1,138 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "testplans": "https://api-evangelist.github.io/test-plans/schema/",
+    "TestMilestone": "testplans:TestMilestone",
+    "TestCycle": "testplans:TestCycle",
+    "TestPlan": "testplans:TestPlan",
+    "approach": {
+      "@id": "testplans:approach",
+      "@type": "xsd:string"
+    },
+    "blocked": {
+      "@id": "testplans:blocked",
+      "@type": "xsd:integer"
+    },
+    "buildVersion": {
+      "@id": "testplans:build_version",
+      "@type": "xsd:string"
+    },
+    "completedDate": {
+      "@id": "testplans:completed_date",
+      "@type": "xsd:date"
+    },
+    "createdAt": {
+      "@id": "schema:dateCreated"
+    },
+    "criteria": {
+      "@id": "testplans:criteria",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "schema:description"
+    },
+    "dueDate": {
+      "@id": "testplans:due_date",
+      "@type": "xsd:date"
+    },
+    "endDate": {
+      "@id": "testplans:end_date",
+      "@type": "xsd:date"
+    },
+    "entryCriteria": {
+      "@id": "testplans:entry_criteria",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "environment": {
+      "@id": "testplans:environment",
+      "@type": "xsd:string"
+    },
+    "environments": {
+      "@id": "testplans:environments",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "exitCriteria": {
+      "@id": "testplans:exit_criteria",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "failed": {
+      "@id": "testplans:failed",
+      "@type": "xsd:integer"
+    },
+    "id": {
+      "@id": "dcterms:identifier"
+    },
+    "inScope": {
+      "@id": "testplans:in_scope",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "schema:name"
+    },
+    "notExecuted": {
+      "@id": "testplans:not_executed",
+      "@type": "xsd:integer"
+    },
+    "objectives": {
+      "@id": "testplans:objectives",
+      "@type": "xsd:string"
+    },
+    "outOfScope": {
+      "@id": "testplans:out_of_scope",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "owner": {
+      "@id": "testplans:owner",
+      "@type": "xsd:string"
+    },
+    "passed": {
+      "@id": "testplans:passed",
+      "@type": "xsd:integer"
+    },
+    "projectId": {
+      "@id": "testplans:project_id",
+      "@type": "xsd:string"
+    },
+    "scope": {
+      "@id": "testplans:scope"
+    },
+    "startDate": {
+      "@id": "testplans:start_date",
+      "@type": "xsd:date"
+    },
+    "status": {
+      "@id": "testplans:status",
+      "@type": "xsd:string"
+    },
+    "testCycleIds": {
+      "@id": "testplans:test_cycle_ids",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "testPlanId": {
+      "@id": "testplans:test_plan_id",
+      "@type": "xsd:string"
+    },
+    "testTypes": {
+      "@id": "testplans:test_types",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "totalTests": {
+      "@id": "testplans:total_tests",
+      "@type": "xsd:integer"
+    },
+    "updatedAt": {
+      "@id": "schema:dateModified"
+    }
+  }
+}
