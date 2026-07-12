@@ -79,6 +79,8 @@ apis:
       - type: Documentation
         url: https://admhelp.microfocus.com/octane/en/latest/Online/Content/API/REST_API.htm
 common:
+  - type: DomainSecurity
+    url: security/test-plans-domain-security.yml
   - type: Documentation
     url: https://en.wikipedia.org/wiki/Test_plan
   - type: Documentation
