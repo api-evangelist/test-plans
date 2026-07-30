@@ -1,3 +1,16 @@
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/test-plans.png
 name: Test Plans
 description: Structured documentation outlining test objectives, scope, approach, resources, schedule, and deliverables for software testing activities. Test plans define the overall strategy for testing a system or feature, specifying what will be tested, how it will be tested, who will test it, and what constitutes a pass or fail. They are critical for coordinating testing efforts across teams and ensuring comprehensive coverage.
 url: https://en.wikipedia.org/wiki/Test_plan
