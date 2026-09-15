@@ -24,6 +24,11 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/test-plans.png
 name: Test Plans
+# x-type: concept -- a software-testing CONCEPT, not a company (roadmap#362). Same class as
+# devops/mvc/waterfall/sdlc, which roadmap#258 already typed; this family was missed because
+# the sweep went by name and these read as products. Found via #258's own tell instead: the
+# website is a Wikipedia entry, which a record has when it has no homepage.
+x-type: concept
 description: Structured documentation outlining test objectives, scope, approach, resources, schedule, and deliverables for software testing activities. Test plans define the overall strategy for testing a system or feature, specifying what will be tested, how it will be tested, who will test it, and what constitutes a pass or fail. They are critical for coordinating testing efforts across teams and ensuring comprehensive coverage.
 url: https://en.wikipedia.org/wiki/Test_plan
 tags:
