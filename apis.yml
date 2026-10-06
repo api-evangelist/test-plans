@@ -39,7 +39,7 @@ tags:
   - Test Management
   - Testing
 created: '2025'
-modified: '2026-05-03'
+modified: '2026-10-06'
 apis:
   - name: TestRail API
     description: REST API for TestRail test management including test plans, test runs, milestones, and reporting, enabling structured test planning and execution tracking.
@@ -110,6 +110,10 @@ apis:
       - type: Documentation
         url: https://admhelp.microfocus.com/octane/en/latest/Online/Content/API/REST_API.htm
 common:
+  - url: https://www.testrail.com/blog/
+    type: Blog
+  - url: https://www.testrail.com/blog/feed/
+    type: BlogRSS
   - type: DomainSecurity
     url: security/test-plans-domain-security.yml
   - type: Documentation
